@@ -1,6 +1,5 @@
 .linkbutton {
-    background-color: #04AA6D;
-    /* Green */
+    background-color: #007bff;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -10,60 +9,67 @@
     font-size: 16px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/* Hideaway menu container */
 .menu-container {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 250px;
     height: 100%;
     background-color: #333;
     color: white;
-    overflow-y: auto;
-    transform: translateX(-100%);
+    transform: translateX(+100%);
     transition: transform 0.3s ease;
 }
 
-.menu-container.open {
+/* When checkbox is checked, show the menu */
+#menu-toggle:checked~.menu-container {
     transform: translateX(0);
 }
 
-.menu-header {
-    padding: 1rem;
-    background-color: #444;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-.menu-items {
+/* Menu items */
+.menu-container ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.menu-items li {
+.menu-container li {
     padding: 1rem;
     border-bottom: 1px solid #555;
 }
 
-.menu-items li a {
+.menu-container a {
     color: white;
     text-decoration: none;
 }
 
-.menu-toggle {
+/* Toggle button styles */
+.menu-toggle-label {
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    right: 1rem;
     background-color: #007bff;
     color: white;
-    border: none;
-    border-radius: 5px;
     padding: 0.5rem 1rem;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* index styles */
+body.index {
+    background-color: rgb(128, 128, 128, 0.5);
+    color: black;
+    width: min-content/2;
 }
