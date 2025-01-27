@@ -4,15 +4,18 @@
 
 <head>
     <title>index</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     </link>
 </head>
 
-<body>
+<body class="index-body">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-toggle-label">Menu</label>
     <div class="menu-container">
         <ul>
+            <li><input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class=back-toggle-style>Back >></label>
+            </li>
             <li><a href="https://people.tamu.edu/~chanevan10/index">About Me</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/portfolio">Portfolio</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/qualifications">Qualifications</a></li>
@@ -21,19 +24,24 @@
         </ul>
     </div>
 
-    <body class="index">
-        <h1>Evan Chan</h1>
-        <img style="width: 300px; height: auto; text-align: center;"
-            src="https://media.licdn.com/dms/image/v2/D4D03AQGxF2qYtfFDbA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696283630120?e=1743033600&v=beta&t=CraRtujAdcYUmoISugJxrCTdAUPVn_XA4FZe5R9bYNM">
-        <p style="width: auto; height: auto">About me:<br>
-            I am an aspiring Computer Engineer with a multifaceted background that includes being a violinist,
+    <h1 class="main-title">Evan Chan</h1>
+
+    <div class="main-left">
+        <img class="main-image" src="./EvanProfHeadshot.jpg">
+        <h2 class="main-title">About Me:</h2>
+        <p class="main-content">
+            I am a Computer Engineer Major at Texas A&M with a multifaceted background that includes being a violinist,
             skilled martial artist, 3d printer enthusiast, and an Eagle Scout. My first exposure to the intricacies
             of technology was building my first home office set up including upgrading a built PC. I've taken that
-            interest with me to Texas A&M, where I now study more about computer architecture and design, as well as
-            working in IT at the Texas A&M Foundation.
+            interest with me to Texas A&M, where I now study more about digital circuit design, software engineering,
+            as well as working in IT at the Texas A&M Foundation.
         </p>
-    </body>
-    <a href="https://www.linkedin.com/in/evan-chan-94ab33176/" class="linkbutton">linkedin</a>
+    </div>
+
+    <p class="main-alt">
+        Background: Picture of a sunrise I took while hiking in the backcountry of New Mexico
+    </p>
+
 </body>
 
 </html>

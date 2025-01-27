@@ -1,27 +1,126 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-    <title>Extracurriculars</title>
-    <h2>By generative AI</h2>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    </link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #e0e0e0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #003366;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #e6eaf0;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        li img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-toggle-label">Menu</label>
-    <div class="menu-container">
+    <header>
+        <div class="title">Welcome to My Hobbies Page</div>
+        <div class="subtitle">Explore my interests and passions!</div>
+    </header>
+    <main>
+        <h2>Activities</h2>
         <ul>
-            <li><a href="https://people.tamu.edu/~chanevan10/index">About Me</a></li>
-            <li><a href="https://people.tamu.edu/~chanevan10/portfolio">Portfolio</a></li>
-            <li><a href="https://people.tamu.edu/~chanevan10/qualifications">Qualifications</a></li>
-            <li><a href="https://people.tamu.edu/~chanevan10/service">Service</a></li>
-            <li><a href="https://people.tamu.edu/~chanevan10/genai">Extracurriculars</a></li>
+            <li>
+                <img src="./BambuLabA1.jpg" alt="Bambu Lab A1 3D Printer">
+                <div>
+                    <h3>3D Printing</h3>
+                    <p>I use the Bambu Lab A1 for my 3D printing projects. It's a highly efficient and reliable printer that supports advanced printing techniques and delivers high-quality results.</p>
+                </div>
+            </li>
+            <li>
+                <img src="./Violin.jpg" alt="Violin">
+                <div>
+                    <h3>Orchestra</h3>
+                    <p>I have played violin since 6th grade and join the Texas A&M Philharmonic Orchestra when I can. Music has been a lifelong passion for me.</p>
+                </div>
+            </li>
+            <li>
+                <img src="./LogitechG29.jpg" alt="Logitech G29 Racing Wheel">
+                <div>
+                    <h3>Racing Simulator</h3>
+                    <p>I enjoy sim racing using Gran Turismo 7 and Assetto Corsa. My setup includes the Logitech G29 racing wheel, which offers an immersive experience.</p>
+                </div>
+            </li>
         </ul>
-    </div>
-    <script src="functions.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Hobbies</p>
+    </footer>
+    <section style="max-width: 800px; margin: 20px auto; padding: 20px; background: #e6eaf0; border-radius: 10px;">
+        <h2>Original Prompt</h2>
+        <p>The website includes a page about my hobbies:</p>
+        <ul>
+            <li><strong>3D Printing:</strong> Information about the printer I use, the Bambu Lab A1, and an image of it.</li>
+            <li><strong>Orchestra:</strong> Details about playing violin since 6th grade and participating in the Texas A&M Philharmonic Orchestra, with a violin image.</li>
+            <li><strong>Racing Simulator:</strong> Details about Gran Turismo 7, Assetto Corsa, and an image of a Logitech G29 racing wheel setup.</li>
+        </ul>
+        <p>The theme includes the colors blue, black, gray, and white, using only HTML and CSS.</p>
+    </section>
 </body>
-
 </html>

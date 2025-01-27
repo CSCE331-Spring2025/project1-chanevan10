@@ -4,15 +4,18 @@
 
 <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     </link>
 </head>
 
-<body>
+<body class="port-body">
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-toggle-label">Menu</label>
     <div class="menu-container">
         <ul>
+            <li><input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class=back-toggle-style>Back >></label>
+            </li>
             <li><a href="https://people.tamu.edu/~chanevan10/index">About Me</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/portfolio">Portfolio</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/qualifications">Qualifications</a></li>
@@ -20,7 +23,50 @@
             <li><a href="https://people.tamu.edu/~chanevan10/genai">Extracurriculars</a></li>
         </ul>
     </div>
-    <script src="functions.js"></script>
+
+    <h2 class="main-title">Projects</h2>
+
+    <div class="port-left">
+        <h2 class="main-title">TURTLE Robotics: Laboratory Assisting Robotic Manipulator (LARM)</h2>
+        <ul class="port-list">
+            <li>Part of a team in TURTLE robotics, designing a robot arm with 6 degrees of freedom to be used in a
+                chemistry wet lab</li>
+            <li>Wrote a program for an Arudino to control a motor via pulse width modulation,
+                where the user inputs an angle and the motor rotates to that angle at a user-defined speed </li>
+        </ul>
+        <h2 class="main-title">PilLED: TAMUhack 2025 project</h2>
+        <div class="port-list">
+            <ul>
+                <img class="port-list-img" src="./PilLED.jpg">
+                <li>PilLED is a smart medication container that provides audible and visual reminders for the user to
+                    take their medication</li>
+                <li>Made a custom chassis in OnShape to house the electronics and pills</li>
+                <li>Wrote a program for an Arduino to control the 7 LEDs corresponding to each day of the week as well
+                    as
+                    the speaker playing the alarm</li>
+                <li>Planning on updating the design with some or all of the following: support motorized dispensing of
+                    medication,
+                    IoT functionality to send text reminders, or adding weight sensitivity to the containters</li>
+            </ul>
+            
+        </div>
+
+        <h2 class="main-title">Magic Mirror: IEEE Hackathon 2024 project</h2>
+        <ul class="port-list">
+            <li>Magic Mirror is a mirror powered with a pretrained pytorch model that detects acne and other blemishes
+                on a user's face</li>
+            <li>Gives a rating for the user based on how clear their face is, and provides encouraging words or
+                reminders</li>
+            <li>Implemented using a raspberry pi 4, pi camera, and a display</li>
+        </ul>
+        <h2 class="main-title">Single Datapath Processor: CSCE 350 project</h2>
+        <ul class="port-list">
+            <li>In Verilog, programmed the digital design of each of the componnents needed for a single datapath
+                processor</li>
+            <li>Implemented the use of register, branch, and other instructions in this processor</li>
+        </ul>
+    </div>
+
 </body>
 
 </html>
