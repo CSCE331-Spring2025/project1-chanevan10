@@ -4,8 +4,9 @@
 
 <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    </link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="./style1.css">
 </head>
 
 <body class="port-body">
@@ -25,6 +26,10 @@
     </div>
 
     <h2 class="main-title">Projects</h2>
+
+    <h1 class="main-right">Switch Between Stylesheets</h1>
+    <button onclick="swapStyle('style1.css')">Style 1</button>
+    <button onclick="swapStyle('style2.css')">Style 2</button>
 
     <div class="port-left">
         <h2 class="main-title">TURTLE Robotics: Laboratory Assisting Robotic Manipulator (LARM)</h2>
@@ -66,6 +71,22 @@
             <li>Implemented the use of register, branch, and other instructions in this processor</li>
         </ul>
     </div>
+
+    <script>
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
+            document.getElementById("stylesheet").setAttribute("href", savedStyle);
+        });
+
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+            localStorage.setItem("selectedStyle", sheet);
+        }
+    </script>
 
 </body>
 

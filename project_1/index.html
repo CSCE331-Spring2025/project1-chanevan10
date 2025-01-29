@@ -3,9 +3,10 @@
 <html>
 
 <head>
-    <title>index</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    </link>
+    <title>About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="./style1.css">
 </head>
 
 <body class="index-body">
@@ -26,6 +27,10 @@
 
     <h1 class="main-title">Evan Chan</h1>
 
+    <h1>Switch Between Stylesheets</h1>
+    <button onclick="swapStyle('style1.css')">Style 1</button>
+    <button onclick="swapStyle('style2.css')">Style 2</button>
+
     <div class="main-left">
         <img class="main-image" src="./EvanProfHeadshot.jpg">
         <h2 class="main-title">About Me:</h2>
@@ -40,7 +45,23 @@
 
     <p class="main-alt">
         Background: Picture of a sunrise I took while hiking in the backcountry of New Mexico
-    </p>
+    </p>  
+
+    <script>
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
+            document.getElementById("stylesheet").setAttribute("href", savedStyle);
+        });
+
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+            localStorage.setItem("selectedStyle", sheet);
+        }
+    </script>
 
 </body>
 

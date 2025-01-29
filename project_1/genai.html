@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="./style1.css">
+
     <title>My Hobbies</title>
     <style>
         body {
@@ -79,6 +81,25 @@
     </style>
 </head>
 <body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">Menu</label>
+    <div class="menu-container">
+        <ul>
+            <li><input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class=back-toggle-style>Back >></label>
+            </li>
+            <li><a href="https://people.tamu.edu/~chanevan10/index">About Me</a></li>
+            <li><a href="https://people.tamu.edu/~chanevan10/portfolio">Portfolio</a></li>
+            <li><a href="https://people.tamu.edu/~chanevan10/qualifications">Qualifications</a></li>
+            <li><a href="https://people.tamu.edu/~chanevan10/service">Service</a></li>
+            <li><a href="https://people.tamu.edu/~chanevan10/genai">Extracurriculars</a></li>
+        </ul>
+    </div>
+
+    <h1>Switch Between Stylesheets</h1>
+    <button onclick="swapStyle('style1.css')">Style 1</button>
+    <button onclick="swapStyle('style2.css')">Style 2</button>
+
     <header>
         <div class="title">Welcome to My Hobbies Page</div>
         <div class="subtitle">Explore my interests and passions!</div>
@@ -122,5 +143,22 @@
         </ul>
         <p>The theme includes the colors blue, black, gray, and white, using only HTML and CSS.</p>
     </section>
+
+    <script>
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
+            document.getElementById("stylesheet").setAttribute("href", savedStyle);
+        });
+
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+            localStorage.setItem("selectedStyle", sheet);
+        }
+    </script>
+
 </body>
 </html>
