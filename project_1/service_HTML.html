@@ -28,42 +28,56 @@
 
 
     <div class="port-left">
-        <h2 class="main-title">Eagle Scout Project</h2>
         <div class="port-list">
-            <img src="./EagleScoutProject.jpg">
-            <ul>
-                <li>Planned, organized, and led a team of volunteers to establish a pocket prairie in a local neighborhood in 
-                    my home town, Sugar Land
-                </li>
-                <li>A pocket prairie is a small garden of native plants to our state: they benefit the environment as they 
-                    are best optimized to keep the soil healthy, provide good habitats for pollenators and other beneficial critters.
-                    Texas native plants grow especially deep roots, helping in irrigation as well.
-                </li>
-            </ul>
-            <button class="linkbutton"><a href="https://www.scouting.org/about/research/eagle-scouts/">About the Eagle Scout Rank</a></button>
+            <h2 class="main-title">Eagle Scout Project</h2>
+            <div class="port-list-inner">
+                <img src="./EagleScoutProject.jpg">
+                <ul>
+                    <li>Planned, organized, and led a team of volunteers to establish a pocket prairie in a local
+                        neighborhood in
+                        my home town, Sugar Land
+                    </li>
+                    <li>A pocket prairie is a small garden of native plants to our state: they benefit the environment
+                        as
+                        they
+                        are best optimized to keep the soil healthy, provide good habitats for pollenators and other
+                        beneficial critters.
+                        Texas native plants grow especially deep roots, helping in irrigation as well.
+                    </li>
+                </ul>
+                <button class="linkbutton"><a href="https://www.scouting.org/about/research/eagle-scouts/">About the
+                        Eagle
+                        Scout Rank</a></button>
+            </div>
+
         </div>
-        <h2 class="main-title">Big Event</h2>
+
         <div class="port-list">
-            <img src="./2016042_BigEvent_0806.jpg">
-            <ul>
-                <li>Big Event 2023: volunteered with friends to help a local Bryan resident clear out their yard of leaves, unwanted
-                    plant beds, and general landscaping
-                </li>
-                <li>Big Event 2024: Volunteered with friends to help a local Bryan resident clear out trash from their yard</li>
-            </ul>
-            <button class="linkbutton"><a href="https://bigevent.tamu.edu/">About Big Event</a></button>
+            <h2 class="main-title">Big Event</h2>
+            <div class="port-list-inner">
+                <img src="./2016042_BigEvent_0806.jpg">
+                <ul>
+                    <li>Big Event 2023: volunteered with friends to help a local Bryan resident clear out their yard of
+                        leaves, unwanted
+                        plant beds, and general landscaping
+                    </li>
+                    <li>Big Event 2024: Volunteered with friends to help a local Bryan resident clear out trash from
+                        their yard</li>
+                </ul>
+                <button class="linkbutton"><a href="https://bigevent.tamu.edu/">About Big Event</a></button>
+            </div>
         </div>
 
         <script>
             function swapStyle(sheet) {
                 document.getElementById("stylesheet").setAttribute("href", sheet);
             }
-    
+
             document.addEventListener("DOMContentLoaded", function () {
                 let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
                 document.getElementById("stylesheet").setAttribute("href", savedStyle);
             });
-    
+
             function swapStyle(sheet) {
                 document.getElementById("stylesheet").setAttribute("href", sheet);
                 localStorage.setItem("selectedStyle", sheet);
