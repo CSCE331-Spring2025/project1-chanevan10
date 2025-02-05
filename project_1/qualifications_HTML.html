@@ -4,6 +4,8 @@
 
 <head>
     <title>Qualifications</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="port-body">
@@ -18,6 +20,9 @@
             <li><a href="https://people.tamu.edu/~chanevan10/portfolio_HTML">Portfolio</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/qualifications_HTML">Qualifications</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/service_HTML">Service</a></li>
+            <li><a href="https://people.tamu.edu/~chanevan10/genai">Extracurriculars</a></li>
+            <li><button class="style-button1" onclick="swapStyle('style1.css')">Style 1</button></li>
+            <li><button class="style-button2" onclick="swapStyle('style2.css')">Style 2</button></li>
         </ul>
     </div>
 
@@ -28,30 +33,68 @@
             <h2 class="main-title">Areas of Interest</h2>
             <div class="main-content">
                 <ul>
-                    <li>Embedded Systems</li>
-                    <li>Digital Circuit Design</li>
-                    <li>Software Engineering</li>
-                    <li>IT/Cybersecurity</li>
+                    <li>
+                        <h4>Embedded Systems</h4>
+                        Working on the smaller computers that go into smaller devices as well as robotic elements is one
+                        of the biggest reasons why I chose this major. Computers are everywhere, and through the
+                        projects I've help develop, learning the skills to create embeded systems has become a big part
+                        of my college career.
+                    </li>
+                    <li>
+                        <h4>Digital circuit design</h4>
+                        One of the fields I've become interested in during my time at Texas A&M is Digital circuit
+                        design. Working in my classes with the hardware description language Verilog to program FPGAs
+                        and design circuits quickly became one of my top interests.
+                    </li>
+                    <li>
+                        <h4>IT/Cybersecurity</h4>
+                        I currently work at the Texas A&M Foundation as a Student IT Technician. One of the biggest
+                        things I've learned working as a Student Technician is how an organization keeps their
+                        information safe. Being a part of a more coorperate organization that protects its clients and
+                        information seriously has given me a new appreciation for cyber security.
+                    </li>
                 </ul>
-                <button class="linkbutton"><a href="https://www.linkedin.com/in/evan-chan-94ab33176/">linkedin</a></button>
+                <h2 class="main-title">Skills</h2>
+                <ul>
+                    <li>
+                        <h4>Software:</h4>
+                        Coding languages: Java, Python, C++, HTML, CSS, Javascript
+                        Project management: Github
+                        Misc.: Git, linux
+                    </li>
+                    <li>
+                        <h4>Hardware:</h4>
+                        Verilog: structural, behavioral, and testbench design, FPGAs
+                        Electrical lab: operating oscilloscopes, power supplies, multimeters, breadboarding
+                        Arduino programming and implementation
+                        Analog, digital, and signal design and analysis
+                    </li>
+                </ul>
+                <button class="linkbutton"><a
+                        href="https://www.linkedin.com/in/evan-chan-94ab33176/">linkedin</a></button>
             </div>
         </div>
     </div>
 
     <div class="main-left">
         <iframe src="https://drive.google.com/file/d/1EVeXFt9rXIXcVOFNc3EC068LsUEV8SoG/preview" class="embed"></iframe>
-        <h2 class="main-title">Skills Explained</h2>
-        <div class="main-content">
-            <ul>
-                <li>Software:</li>
-                <li>Hardware:</li>
-                <li>Microsoft</li>
-                <li>CAD:</li>
-            </ul>
-        </div>
     </div>
 
-    
+    <script>
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
+            document.getElementById("stylesheet").setAttribute("href", savedStyle);
+        });
+
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+            localStorage.setItem("selectedStyle", sheet);
+        }
+    </script>
 
 </body>
 

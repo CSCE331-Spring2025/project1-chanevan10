@@ -22,35 +22,68 @@
             <li><a href="https://people.tamu.edu/~chanevan10/qualifications">Qualifications</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/service">Service</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/genai">Extracurriculars</a></li>
+            <li><button class="style-button1" onclick="swapStyle('style1.css')">Style 1</button></li>
+            <li><button class="style-button2" onclick="swapStyle('style2.css')">Style 2</button></li>
         </ul>
     </div>
 
     <h1 class="main-title">Evan Chan</h1>
 
-    <button onclick="swapStyle('style1.css')">Style 1</button>
-    <button onclick="swapStyle('style2.css')">Style 2</button>
-
     <div class="main-left">
         <img class="main-image" src="./EvanProfHeadshot.jpg">
         <h2 class="main-title">About Me:</h2>
         <p class="main-content">
-            I am a Computer Engineer Major at Texas A&M with a multifaceted background that includes being a violinist,
-            skilled martial artist, 3d printer enthusiast, and an Eagle Scout. My first exposure to the intricacies
-            of technology was building my first home office set up including upgrading a built PC. I've taken that
-            interest with me to Texas A&M, where I now study more about digital circuit design, software engineering,
-            as well as working in IT at the Texas A&M Foundation.
+            Howdy! My name is Evan, I'm from Sugar Land, TX, and I'm studying Computer Engineering at Texas A&M
+            University
         </p>
+        <div class="main-content">
+            <ul>
+                <li>
+                    <h3>Background</h3>
+                    <p>Born in Houston and raised in Sugar Land, I grew up learning how to work with technology in and
+                        out of school, eventually leading me to come to Texas A&M where I ended up deciding to pursue a
+                        degree in computer engineering. My first true exposure to the field was when I upgraded my first
+                        desktop tower, swapping from a hard drive to a solid state drive to complement the already
+                        decent graphics card. I learned a lot about computers in the process, and was rewarded with a
+                        fast performing PC which started my interest in making computers.
+                    </p>
+                </li>
+                <li>
+                    <p>Throughout the entirety of middle school and High School, I dedicated myself to three main
+                        activities.
+                    </p>
+                </li>
+                <li>
+                    <h4>Scouting</h4>
+                    Scouting taught me many valuable life lessons that help make me who I am today. As an Eagle
+                    Scout, I planned and led a service project in my community with a team of 30 volunteers consisting
+                    of friends, fellow scouts, and family. Scouting taught me many different principles, the most
+                    valuable I think being servant leadership and how to be a good teammate.
+                </li>
+                <li>
+                    <h4>Violin</h4>
+                    My musical journey started in 6th grade, where picking up the violin would lead me to many
+                    different opportunities. Learning, pracitcing, and rehearsing with different pieces of music every
+                    couple of months helped me develop an ability to make changes on the fly, a skill I like to apply in
+                    everything I do. At Texas A&M, if my schedule allows, I take the chance to be in the University
+                    Philharmonic Orchestra where I continue to have fun making music with others.
+                </li>
+                <li>
+                    <h4>Zen do Kai karate</h4>
+                    Zen do Kai means "whatever works", meaning I got to learn not only karate, but self defense,
+                    and elements and ideals from other martial arts. Here, I was able to push myself and kept on working
+                    for 8 years to eventually become an adult black belt, meaning I learned how to approach dangerous
+                    situations with peace in mind, how to push my limits, and how to be confident yet humble.
+                </li>
+            </ul>
+        </div>
     </div>
 
     <p class="main-alt">
         Background: Picture of a sunrise I took while hiking in the backcountry of New Mexico
-    </p>  
+    </p>
 
     <script>
-        function swapStyle(sheet) {
-            document.getElementById("stylesheet").setAttribute("href", sheet);
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
             document.getElementById("stylesheet").setAttribute("href", savedStyle);

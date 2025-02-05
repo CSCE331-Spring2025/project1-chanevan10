@@ -4,6 +4,8 @@
 
 <head>
     <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="port-body">
@@ -18,8 +20,12 @@
             <li><a href="https://people.tamu.edu/~chanevan10/portfolio_HTML">Portfolio</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/qualifications_HTML">Qualifications</a></li>
             <li><a href="https://people.tamu.edu/~chanevan10/service_HTML">Service</a></li>
+            <li><a href="https://people.tamu.edu/~chanevan10/genai_HTML">Extracurriculars</a></li>
+            <li><button class="style-button1" onclick="swapStyle('style1.css')">Style 1</button></li>
+            <li><button class="style-button2" onclick="swapStyle('style2.css')">Style 2</button></li>
         </ul>
     </div>
+
     <h2 class="main-title">Projects</h2>
 
     <div class="port-left">
@@ -33,7 +39,7 @@
         <h2 class="main-title">PilLED: TAMUhack 2025 project</h2>
         <div class="port-list">
             <ul>
-                <img src="./PilLED.jpg">
+                <img class="port-list-img" src="./PilLED.jpg">
                 <li>PilLED is a smart medication container that provides audible and visual reminders for the user to
                     take their medication</li>
                 <li>Made a custom chassis in OnShape to house the electronics and pills</li>
@@ -63,9 +69,21 @@
         </ul>
     </div>
 
-    <div class="main-right">
+    <script>
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+        }
 
-    </div>
+        document.addEventListener("DOMContentLoaded", function () {
+            let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
+            document.getElementById("stylesheet").setAttribute("href", savedStyle);
+        });
+
+        function swapStyle(sheet) {
+            document.getElementById("stylesheet").setAttribute("href", sheet);
+            localStorage.setItem("selectedStyle", sheet);
+        }
+    </script>
 
 </body>
 
