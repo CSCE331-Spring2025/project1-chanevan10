@@ -28,6 +28,15 @@
 
     <h1 class="main-title">Evan Chan</h1>
 
+    <div class="main-right">
+        <div class="main-content">
+            <h2>Contact me at:</h2>
+                <button class="linkbutton"><a href="https://chanevan10@gmail.com">email</a></button>
+                <button class="linkbutton"><a href="https://discordapp.com/users/vanelegend">discord</a></button>
+                <button class="linkbutton"><a href="https://www.instagram.com/vanelegend27/">instagram</a></button>
+        </div>
+    </div>
+
     <div class="main-left">
         <img class="main-image" src="./EvanProfHeadshot.jpg">
         <h2 class="main-title">About Me:</h2>
@@ -72,7 +81,8 @@
                     Zen do Kai means "whatever works", meaning I got to learn not only karate, but self defense,
                     and elements and ideals from other martial arts. Here, I was able to push myself and kept on working
                     for 8 years to eventually become an adult black belt, meaning I learned how to approach dangerous
-                    situations with peace in mind, how to push my limits, and how to be confident yet humble.
+                    situations with peace in mind, how to push my limits, and how to be confident yet humble. <br>
+                    <button class = "linkbutton"><a href="https://www.instagram.com/safetyamericakarate/">Safety America Instagram Page</a></button>
                 </li>
             </ul>
         </div>
@@ -83,10 +93,6 @@
     </p>
 
     <script>
-        function swapStyle(sheet) {
-            document.getElementById("stylesheet").setAttribute("href", sheet);
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             let savedStyle = localStorage.getItem("selectedStyle") || "style1.css";
             document.getElementById("stylesheet").setAttribute("href", savedStyle);

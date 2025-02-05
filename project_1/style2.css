@@ -41,6 +41,7 @@
 
 /* Hideaway menu container */
 .menu-container {
+    order: 1;
     position: fixed;
     top: 0;
     right: 0;
@@ -50,7 +51,6 @@
     color: black;
     transform: translateY(+100%);
     transition: transform 0.3s ease;
-    z-index: 12;
 }
 
 /* When checkbox is checked, show the menu */
@@ -108,6 +108,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 12;
 }
 
 /* Hide the checkbox */
@@ -129,7 +130,15 @@ body {
 
 /* main styles */
 .main-title {
-    background-color: rgb(0, 255, 123, 0.5);
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-header{
+    background-color: green;
     text-align: center;
     border-radius: 5px;
     width: 100%;
@@ -137,6 +146,9 @@ body {
 }
 
 .main-left {
+    position: fixed;
+    top: 0px;
+    right: 0px;
     background: rgb(100, 100, 100, 0.5);
     color: white;
     width: 50%;
@@ -144,19 +156,29 @@ body {
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    overflow: auto; /* Enable scrolling */
 }
 
 .main-right {
-    position: absolute;
-    right: 0px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
     width: 50%;
-    height: 100%;
+    height: auto;
+    /* Adjust as needed */
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Optional: background color for better visibility */
+    padding: 20px;
+    /* Optional: padding for content */
 }
 
 .main-image {
-    width: 100%;
-    height: auto;
+    position: fixed;
+    left: 10%;
+    top: 15%;
+    height: 50%;
+    width: auto;
 }
 
 .main-content {
@@ -171,19 +193,18 @@ body {
 }
 
 .main-content li {
-    background-color: rgba(0, 255, 123, 0.5);
+    background-color: rgb(0, 255, 123, 0.5);
     border-radius: 5px;
     padding: 10px;
     text-align: justify;
 }
-
 
 .main-alt {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
     width: 45%;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(128, 128, 128);
 }
 
 .main-list {
@@ -193,29 +214,89 @@ body {
 
 /* index specific styles */
 .index-body {
+    display: flex;
+    align-items: flex-end;
     background-image: url(./PhilmontSunrise.jpg);
     background-size: cover;
 }
 
 /* portfolio specific styles */
 .port-body {
-    background-color: white;
+    background-color: #333;
+}
+
+.port-right{
+    position: fixed;
+    left: 0px;
+    top: 10%;
+    width: 50%;
+    height: 100%;
+    /* Adjust as needed */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Optional: background color for better visibility */
+    padding: 20px;
+    /* Optional: padding for content */
+    overflow: auto;
 }
 
 .port-left {
-    background: rgb(100, 100, 100, 0.5);
-    color: white;
+    background: rgb(128, 128, 128, 0.5);
+    color: black;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns */
+    gap: 20px;
+    /* Optional: space between the grid items */
+}
+
+.port-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.port-list-inner {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(0, 255, 123, 0.5);
+    /* Background color for the inner box */
+    border-radius: 10px;
+    /* Optional: add rounded corners */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.port-list-inner h2 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.port-list-inner img {
+    display: block;
+    margin: 0 auto;
 }
 
 .port-list ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
 }
 
+
+
 .port-list li {
-    width: 60%;
     /* Take up the left 60% */
     padding: 10px;
     /* Add some padding for readability */
@@ -223,23 +304,14 @@ body {
     /* Include padding in width calculation */
 }
 
-.port-list-img {
-    position: absolute;
-    right: 20px;
-    width: 17%;
+.port-list img {
+    width: 75%;
     height: auto;
+    padding: 10px;
 }
 
 /* qualification specific styling */
 .embed {
     width: 100%;
     height: 700px;
-}
-
-/* image specific styling */
-.ESPimg {
-    position: absolute;
-    right: 20px;
-    width: 17%;
-    height: auto;
 }
